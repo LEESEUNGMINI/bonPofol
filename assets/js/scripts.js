@@ -65,7 +65,7 @@ jQuery(function ($) {
 
     }());
 
-  
+
     // -------------------------------------------------------------
     // Sticky Menu
     // -------------------------------------------------------------
@@ -117,8 +117,15 @@ jQuery(function ($) {
             $(this).unbind('inview');
         }
     });
-
-
+    const si = document.getElementById("tt-preloader");
+    console.log(si);
+    
+    setTimeout(() => {
+      si.classList.add("hide-preloader");
+    }, 1000);
+    setTimeout(() => {
+        si.style.display = "none";
+      }, 2000);
     // -------------------------------------------------------------
     // Progress Bar
     // -------------------------------------------------------------
