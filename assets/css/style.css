@@ -1107,7 +1107,13 @@ Resume Timeline
    border: 1px solid #eee;
    border-bottom: 3px double #eee;
 }
-
+#tt-preloader {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .hide-preloader {
+    opacity: 0;
+  }
 
 .portfolio {
     position: relative;
