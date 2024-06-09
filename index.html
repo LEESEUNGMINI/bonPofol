@@ -711,32 +711,28 @@
         <h2 class="section-title wow fadeInUp">Get in touch</h2>
 
         <div class="row">
-          <div class="col-md-6">
+          <div id="wabDiv" class="col-md-6">
             <div class="contact-form">
               <strong>메세지를 전송해 보세요</strong>
-              <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
-
-                <div class="form-group">
-                  <label for="name">이름 </label>
-                  <input type="text" name="name" class="form-control" id="name" required="">
+              <form class="gform" method="post" data-email="a33990748@gmail.com" action="https://script.google.com/macros/s/AKfycbyjs0HJnWkZwMPNEC7WyEGbh3CSJ_uMo8VzA2mrUV4PnE4Gg8LwfdDqjYkI-tiYxykGWw/exec">
+                <div class="fields">
+                  <div class="field half">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                  </div>
+                  <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                  </div>
+                  <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4"></textarea>
+                  </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="email">이메일</label>
-                  <input type="email" name="email" class="form-control" id="email" required="">
-                </div>
-
-                <div class="form-group">
-                  <label for="subject">제목</label>
-                  <input type="text" name="subject" class="form-control" id="subject">
-                </div>
-
-                <div class="form-group">
-                  <label for="message">내용</label>
-                  <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" name="submit" class="btn btn-primary">전송하기</button>
+                <ul class="actions">
+                  <li><input type="reset" value="Reset" /></li>
+                  <li><input type="submit" value="Send Message" class="primary" /></li>
+                </ul>
               </form>
             </div><!-- /.contact-form -->
           </div><!-- /.col-md-6 -->
@@ -783,5 +779,27 @@
   <script src="assets/js/jquery.fitvids.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <script src="assets/js/scripts.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector('.gform').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var form = this;
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open(form.method, form.action);
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    alert('메일 전송 완료!');
+                    form.reset();
+                } else {
+                    alert('메일 전송 완료!');
+                }
+            };
+            xhr.send(formData);
+        });
+    });
+    </script>
 </body>
 </html>

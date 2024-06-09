@@ -1832,3 +1832,105 @@ Icon for all respective meta
     padding: 5px;
     box-shadow: 0 0px 0px 1px #eee;
 }
+
+/* 여기서 하자 */
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+    
+  }
+  
+  #contact .section-title {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  #contact .contact-form {
+    background: #f0f5ff; /* 부드러운 파란색 */
+    padding: 40px;
+    border-radius: 15px;
+  }
+  
+  #contact .contact-form strong {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333; /* 제목 텍스트 색상 */
+  }
+  
+  #contact .contact-form .fields {
+    margin-bottom: 30px;
+  }
+  
+  #contact .contact-form .field {
+    margin-bottom: 20px;
+  }
+  
+  #contact .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  #contact .contact-form input[type="text"],
+  #contact .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #b3c6ff; /* 부드러운 파란색 경계선 */
+    border-radius: 8px;
+    outline: none;
+  }
+
+  #contact .contact-form input[type="submit"],
+  #contact .contact-form input[type="reset"] {
+    padding: 15px 30px;
+    margin-top: 10px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease; /* 부드러운 버튼 색상 전환 */
+  }
+  
+  #contact .contact-form input[type="submit"]:hover,
+  #contact .contact-form input[type="reset"]:hover {
+    background: #0056b3; /* 버튼 호버 색상 변경 */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 992px) {
+    #contact .contact-form {
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #contact .contact-form strong {
+      font-size: 18px;
+    }
+  }
+  
+  /* 양 옆으로 배치하기 */
+  #contact .contact-form .fields {
+    flex-wrap: wrap;
+  }
+  
+  #contact .contact-form .field.half {
+    max-width: 100%;
+  }
+  @media screen and (min-width:991px) {
+    #wabDiv{
+        width: 70%;
+      }
+  }
+ 
+  #contact .contact-form .field.half:last-child {
+    padding-right: 0;
+  }
+  .actions{
+    display: flex;
+    justify-content: space-between;
+  }
