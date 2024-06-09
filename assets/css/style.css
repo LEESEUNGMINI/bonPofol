@@ -1899,7 +1899,11 @@ Icon for all respective meta
   #contact .contact-form input[type="reset"]:hover {
     background: #0056b3; /* 버튼 호버 색상 변경 */
   }
-  
+  .fa,
+.fas {
+  font-size: 24px;
+  color: #333; /* 아이콘 색상 */
+}
   /* Responsive Styling */
   @media (max-width: 992px) {
     #contact .contact-form {
