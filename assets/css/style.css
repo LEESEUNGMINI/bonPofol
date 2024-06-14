@@ -69,7 +69,14 @@ a:hover {
     text-decoration: none;
 }
 
-
+.entry-title{
+    display: flex;
+    justify-content: space-between;
+}
+.entry-title span{
+    font-weight: 500;
+    font-size: 14px;
+}
 /* Transition elsements
 -------------------------------------------------------- */
 .navbar a,
